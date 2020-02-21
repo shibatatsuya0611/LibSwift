@@ -17,6 +17,7 @@
 		4DF6C27323FF8B6600D0B139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF6C27223FF8B6600D0B139 /* Assets.xcassets */; };
 		4DF6C27623FF8B6600D0B139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF6C27423FF8B6600D0B139 /* LaunchScreen.storyboard */; };
 		4DF6C28123FF8B6700D0B139 /* SwiftLibExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6C28023FF8B6700D0B139 /* SwiftLibExampleTests.swift */; };
+		4DF6C28A23FF991C00D0B139 /* SwiftLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6C28923FF991C00D0B139 /* SwiftLib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		4DF6C27C23FF8B6600D0B139 /* SwiftLibExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLibExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF6C28023FF8B6700D0B139 /* SwiftLibExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLibExampleTests.swift; sourceTree = "<group>"; };
 		4DF6C28223FF8B6700D0B139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DF6C28923FF991C00D0B139 /* SwiftLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				4DF6C24C23FF898500D0B139 /* LibSwift.h */,
 				4DF6C24D23FF898500D0B139 /* Info.plist */,
+				4DF6C28923FF991C00D0B139 /* SwiftLib.swift */,
 			);
 			path = LibSwift;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				TargetAttributes = {
 					4DF6C24823FF898500D0B139 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					4DF6C25123FF898500D0B139 = {
 						CreatedOnToolsVersion = 11.3;
@@ -322,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF6C28A23FF991C00D0B139 /* SwiftLib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,13 +442,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -494,12 +500,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -509,6 +516,7 @@
 		4DF6C25E23FF898500D0B139 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -524,6 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.LibSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -532,6 +541,7 @@
 		4DF6C25F23FF898500D0B139 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -555,6 +565,7 @@
 		4DF6C26123FF898500D0B139 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LibSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -572,6 +583,7 @@
 		4DF6C26223FF898500D0B139 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LibSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
